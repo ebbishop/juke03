@@ -3,9 +3,6 @@
   <div class="row">
     <div class="col-xs-4" ng-repeat="album in albums">
       <a class="thumbnail" ui-sref="album({albumid:album._id})">
-      <!-- <a class="thumbnail" ng-href="/#/albums/{{album._id}}"> -->
-      <!-- <a class="thumbnail" ui-sref="album" > -->
-<!-- <a class="thumbnail" ui-sref= href="#" ng-click="viewOneAlbum(album)"> -->
         <img ng-src="{{ album.imageUrl }}">
         <div class="caption">
           <h5>

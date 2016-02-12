@@ -5,12 +5,22 @@ juke.config(function($stateProvider){
   $stateProvider.state('allArtists', {
     url: '/artists',
     templateUrl: '/views/allartists.template.html',
-    controller: 'ArtistsCtrl'
+    controller: 'ArtistsCtrl',
+    resolve:{
+      artists: function(ArtistFactory){
+        return ArtistFactory.fetchAll();
+      }
+    }
   })
   .state('artist', {
   	url: '/artist/:artistid',
   	templateUrl: '/views/artist.template.html',
-  	controller: 'ArtistCtrl'
+  	controller: 'ArtistCtrl',
+    resolve: {
+      artist: function(ArtistFactory, $stateParams){
+        return ArtistFactory.fetchById($stateParams.artistid);
+      }
+    }
   })
   .state('artist.albums', {
     url: '/artist/:artistid/albums',
