@@ -12,4 +12,14 @@ juke.config(function($stateProvider){
   	templateUrl: '/views/artist.template.html',
   	controller: 'ArtistCtrl'
   })
+  .state('artist.albums', {
+    url: '/artist/:artistid/albums',
+    templateUrl: '/views/artist.albums.template.html',
+    controller: 'ArtistCtrl'
+  })
+  .state('artist.songs', {
+    url: '/artist/:artistid/songs',
+    templateUrl: '/views/artist.songs.template.html',
+    controller: 'ArtistCtrl'
+  })
 })
