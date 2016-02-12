@@ -7,4 +7,9 @@ juke.config(function($stateProvider){
     templateUrl: '/views/allartists.template.html',
     controller: 'ArtistsCtrl'
   })
+  .state('artist', {
+  	url: '/artist/:artistid',
+  	templateUrl: '/views/artist.template.html',
+  	controller: 'ArtistCtrl'
+  })
 })
