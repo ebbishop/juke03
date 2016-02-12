@@ -39,14 +39,15 @@ juke.controller('AlbumCtrl', function ($scope, $log, PlayerFactory, AlbumFactory
 
 juke.controller('AlbumsCtrl', function ($scope, $log, $rootScope, PlayerFactory, AlbumFactory) {
 
-  $scope.showMe = true;
+  // $scope.showMe = true;
 
-  $scope.$on('viewSwap', function (event, data) {
-    $scope.showMe = (data.name === 'allAlbums');
-  });
+  // $scope.$on('viewSwap', function (event, data) {
+  //   $scope.showMe = (data.name === 'allAlbums');
+  //   console.log($scope.showMe);
+  // });
 
   $scope.viewOneAlbum = function (album) {
-    $rootScope.$broadcast('viewSwap', { name: 'oneAlbum', id: album._id });
+    // $rootScope.$broadcast('viewSwap', { name: 'oneAlbum', id: album._id });
   };
 
   AlbumFactory.fetchAll()
